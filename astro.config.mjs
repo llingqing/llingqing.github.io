@@ -29,7 +29,7 @@ import mdx from "@astrojs/mdx";
 import searchIndexer from "./src/integrations/searchIndex.mts";
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://llingqing.github.io',
+	site: 'https://lingqing.netlify.app',
 	base: "/",
 	trailingSlash: "always",
 	integrations: [
