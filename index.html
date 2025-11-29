@@ -1565,7 +1565,7 @@ const jsPath = "/pio/static/spine-player.min.js";
           console.log("✅ Spine runtime loaded from CDN");
           resolve();
         };
-        script.onerror = (error) => {
+        script.onerror = (_error) => {
           console.warn("⚠️ CDN failed, trying local fallback...");
 
           // 尝试本地回退
@@ -1616,7 +1616,7 @@ const jsPath = "/pio/static/spine-player.min.js";
       window.spineModelInitialized = true;
 
       // 创建 SpinePlayer
-      const player = new window.spine.SpinePlayer("spine-player-container", {
+      const _player = new window.spine.SpinePlayer("spine-player-container", {
         skeleton: modelPath,
         atlas: atlasPath,
         animation: "idle",
@@ -1717,7 +1717,7 @@ const jsPath = "/pio/static/spine-player.min.js";
 
           console.log("✅ Spine model setup complete!");
         },
-        error: (player, reason) => {
+        error: (_player, reason) => {
           console.error("❌ Spine model loading error:", reason);
 
           const errorDiv = document.getElementById("spine-error");
