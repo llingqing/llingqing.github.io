@@ -6,10 +6,7 @@ on:
   pull_request:
     branches: [ master ] # Adjust branches as needed
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+
 jobs:
   quality:
     runs-on: ubuntu-latest
