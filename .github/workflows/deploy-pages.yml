@@ -23,41 +23,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'pnpm'
-          cache-dependency-path: pnpm-lock.yaml
 
-      - name: Setup pnpm (primary)
+
+      - name: Setup pnpm 
         uses: pnpm/action-setup@v2
         with:
           version: 8
 
-      - name: Verify pnpm is available (and fallback if needed)
-        shell: bash
-        run: |
-          set -e
-          echo "Checking pnpm..."
-          if command -v pnpm >/dev/null 2>&1; then
-            echo "pnpm found: $(pnpm --version)"
-          else
-            echo "pnpm not found — attempting fallback installation" >&2
-            # fallback1: use corepack (recommended on modern Node)
-            if command -v corepack >/dev/null 2>&1; then
-              echo "Using corepack to prepare pnpm@8"
-              corepack enable
-              corepack prepare pnpm@8 --activate
-            else
-              # fallback2: global npm install
-              echo "corepack not available; installing pnpm globally via npm"
-              npm install -g pnpm@8
-            fi
-            echo "pnpm after fallback: $(pnpm --version)"
-          fi
-
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
-      - name: Build site
-        run: pnpm build
+      - name: Build 
+        run: pnpm run build
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
