@@ -1,0 +1,3 @@
+# Prevent Jekyll from parsing Astro files and the src/pages folder
+**/*.astro
+src/pages
