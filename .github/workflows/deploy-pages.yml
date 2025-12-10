@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      - master
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -17,7 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js (use Node 18/20 as needed)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
