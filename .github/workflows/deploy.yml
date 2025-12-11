@@ -4,7 +4,7 @@ on:
   # 每次推送到 `main` 分支时触发这个“工作流程”
   # 如果你使用了别的分支名，请按需将 `main` 替换成你的分支名
   push:
-    branches: [ main ]
+    branches: [ master ]
   # 允许你在 GitHub 上的 Actions 标签中手动触发此“工作流程”
   workflow_dispatch:
 
@@ -37,3 +37,24 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Show build output for debug
+        run: |
+          echo "Workspace root:"
+          ls -la
+          echo "Dist directory full path:"
+          pwd
+          if [ -d "./dist" ]; then
+            echo "Listing ./dist (root):"
+            ls -la ./dist
+            echo "Check for index.html at dist root:"
+            if [ -f "./dist/index.html" ]; then
+              echo "Found index.html — show head:"
+              head -n 40 ./dist/index.html
+            else
+              echo "No index.html at dist root. Show tree under dist:"
+              find ./dist -maxdepth 4 -type f -print | sed -n '1,200p'
+            fi
+          else
+            echo "ERROR: ./dist not found" && exit 1
+          fi
