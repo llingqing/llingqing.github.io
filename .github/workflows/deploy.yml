@@ -63,10 +63,22 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
 
+      - name: Verify publish dir before upload
+        run: |
+          echo "Publish dir: $PUBLISH_DIR"
+          if [ ! -d "$PUBLISH_DIR" ]; then
+            echo "ERROR: publish dir '$PUBLISH_DIR' not found"
+            exit 1
+          fi
+          echo "Files count:"
+          find "$PUBLISH_DIR" -type f | wc -l
+          echo "Disk usage:"
+          du -sh "$PUBLISH_DIR" || true
+          echo "Top files:"
+          find "$PUBLISH_DIR" -type f -print | head -n 50
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: $PUBLISH_DIR
-
+          path: ./dist
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
