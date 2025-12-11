@@ -37,20 +37,15 @@ jobs:
 
       - name: Show build output for debug
         run: |
-          echo "Workspace root:"
-          ls -la
-          echo "Dist directory full path:"
-          pwd
+          echo "Workspace root:" && ls -la
+          echo "Dist directory full path:" && pwd
           if [ -d "./$PUBLISH_DIR" ]; then
-            echo "Listing ./$PUBLISH_DIR (root):"
-            ls -la "./$PUBLISH_DIR"
+            echo "Listing ./$PUBLISH_DIR (root):" && ls -la "./$PUBLISH_DIR"
             echo "Check for index.html at dist root:"
             if [ -f "./$PUBLISH_DIR/index.html" ]; then
-              echo "Found index.html — show head:"
-              head -n 40 "./$PUBLISH_DIR/index.html"
+              echo "Found index.html — show head:" && head -n 40 "./$PUBLISH_DIR/index.html"
             else
-              echo "No index.html at dist root. Show tree under dist:"
-              find "./$PUBLISH_DIR" -maxdepth 4 -type f -print | sed -n '1,200p'
+              echo "No index.html at dist root. Show tree under dist:" && find "./$PUBLISH_DIR" -maxdepth 4 -type f -print | sed -n '1,200p'
             fi
           else
             echo "ERROR: ./$PUBLISH_DIR not found" && exit 1
@@ -63,22 +58,39 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Verify publish dir before upload
-        run: |
-          echo "Publish dir: $PUBLISH_DIR"
-          if [ ! -d "$PUBLISH_DIR" ]; then
-            echo "ERROR: publish dir '$PUBLISH_DIR' not found"
-            exit 1
-          fi
-          echo "Files count:"
-          find "$PUBLISH_DIR" -type f | wc -l
-          echo "Disk usage:"
-          du -sh "$PUBLISH_DIR" || true
-          echo "Top files:"
-          find "$PUBLISH_DIR" -type f -print | head -n 50
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+          name: github-pages
+
+      - name: Wait for artifact to be queryable
+        run: |
+          # Wait until the artifact "github-pages" is visible via the Actions API for this run.
+          repo="$GITHUB_REPOSITORY"
+          run_id="$GITHUB_RUN_ID"
+          artifact_name="github-pages"
+          max_attempts=12
+          attempt=0
+          echo "Waiting for artifact '$artifact_name' for run $run_id in repo $repo ..."
+          while [ $attempt -lt $max_attempts ]; do
+            echo "Attempt $((attempt+1))/$max_attempts ..."
+            response=$(curl -sS -H "Accept: application/vnd.github+json" -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$repo/actions/runs/$run_id/artifacts")
+            if echo "$response" | grep -q "\"name\": \"$artifact_name\""; then
+              echo "Artifact '$artifact_name' found."
+              exit 0
+            fi
+            attempt=$((attempt+1))
+            sleep 5
+          done
+          echo "Timed out waiting for artifact '$artifact_name' after $max_attempts attempts." >&2
+          echo "Response was:"
+          echo "$response"
+          exit 1
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
+        with:
+          artifact_name: github-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
