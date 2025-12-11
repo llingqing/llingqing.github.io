@@ -30,7 +30,7 @@ import searchIndexer from "./src/integrations/searchIndex.mts";
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://llingqing.github.io',
-	base: "/",
+	// base: "/",
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
