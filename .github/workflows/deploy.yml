@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
   # 每次推送到 `main` 分支时触发这个"工作流程"
