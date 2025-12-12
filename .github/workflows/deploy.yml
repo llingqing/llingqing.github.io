@@ -36,22 +36,6 @@ jobs:
       - name: Build site
         run: pnpm run build
 
-      - name: Show build output for debug
-        run: |
-          echo "Workspace root:" && ls -la
-          echo "Dist directory full path:" && pwd
-          if [ -d "./$PUBLISH_DIR" ]; then
-            echo "Listing ./$PUBLISH_DIR (root):" && ls -la "./$PUBLISH_DIR"
-            echo "Check for index.html at dist root:"
-            if [ -f "./$PUBLISH_DIR/index.html" ]; then
-              echo "Found index.html — show head:" && head -n 40 "./$PUBLISH_DIR/index.html"
-            else
-              echo "No index.html at dist root. Show tree under dist:" && find "./$PUBLISH_DIR" -maxdepth 4 -type f -print | sed -n '1,200p'
-            fi
-          else
-            echo "ERROR: ./$PUBLISH_DIR not found" && exit 1
-          fi
-
       - name: Ensure .nojekyll in publish dir
         run: |
           touch "$PUBLISH_DIR/.nojekyll"
