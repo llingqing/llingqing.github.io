@@ -72,7 +72,8 @@ jobs:
           echo "Response was:"
           echo "$response"
           exit 1
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
         with:
