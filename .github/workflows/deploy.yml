@@ -49,31 +49,6 @@ jobs:
           path: ./dist
           name: github-pages
 
-      - name: Wait for artifact to be queryable
-        run: |
-          repo="$GITHUB_REPOSITORY"
-          run_id="$GITHUB_RUN_ID"
-          artifact_name="github-pages"
-          max_attempts=12
-          attempt=0
-          echo "Waiting for artifact '$artifact_name' for run $run_id in repo $repo ..."
-          while [ $attempt -lt $max_attempts ]; do
-            echo "Attempt $((attempt+1))/$max_attempts ..."
-            response=$(curl -sS -H "Accept: application/vnd.github+json" -H "Authorization: token $GITHUB_TOKEN" \
-              "https://api.github.com/repos/$repo/actions/runs/$run_id/artifacts")
-            if echo "$response" | grep -q "\"name\": \"$artifact_name\""; then
-              echo "Artifact '$artifact_name' found."
-              exit 0
-            fi
-            attempt=$((attempt+1))
-            sleep 5
-          done
-          echo "Timed out waiting for artifact '$artifact_name' after $max_attempts attempts." >&2
-          echo "Response was:"
-          echo "$response"
-          exit 1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
         with:
