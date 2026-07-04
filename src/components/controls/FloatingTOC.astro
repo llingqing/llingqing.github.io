@@ -149,12 +149,9 @@ const hideSidebarOnPostPage =
     };
   }
 
-  // Create local reference for type safety
-  const FT = window.FloatingTOC!;
-
   // 切换 TOC 面板
   window.toggleFloatingTOC = function () {
-    const panel = FT.panel;
+    const panel = window.FloatingTOC.panel;
     if (!panel) return;
 
     const isHidden = panel.classList.contains("hide");
@@ -169,7 +166,7 @@ const hideSidebarOnPostPage =
 
   // 关闭 TOC 面板
   function closeTOC() {
-    const panel = FT.panel;
+    const panel = window.FloatingTOC.panel;
     if (panel && !panel.classList.contains("hide")) {
       panel.classList.add("hide");
       panel.classList.remove("show");
@@ -234,7 +231,7 @@ const hideSidebarOnPostPage =
   // 检查是否应该显示悬浮目录
   function shouldShowFloatingTOC() {
     // 检查是否为文章页面
-    if (!FT.isPostPage?.()) {
+    if (!window.FloatingTOC.isPostPage()) {
       return false;
     }
 
@@ -261,7 +258,7 @@ const hideSidebarOnPostPage =
 
   // 更新悬浮目录的显示状态
   function updateFloatingTOCVisibility() {
-    const btn = FT.btn;
+    const btn = window.FloatingTOC.btn;
     if (!btn) return;
 
     if (shouldShowFloatingTOC()) {
@@ -275,10 +272,10 @@ const hideSidebarOnPostPage =
 
   // 初始化 FloatingTOC
   async function initFloatingTOC() {
-    FT.btn = document.getElementById("floating-toc-btn");
-    FT.panel = document.getElementById("floating-toc-panel");
+    window.FloatingTOC.btn = document.getElementById("floating-toc-btn");
+    window.FloatingTOC.panel = document.getElementById("floating-toc-panel");
 
-    if (!FT.btn || !FT.panel) {
+    if (!window.FloatingTOC.btn || !window.FloatingTOC.panel) {
       return;
     }
 
@@ -287,12 +284,12 @@ const hideSidebarOnPostPage =
 
     try {
       // 清理旧实例
-      if (FT.manager) {
-        FT.manager.cleanup();
+      if (window.FloatingTOC.manager) {
+        window.FloatingTOC.manager.cleanup();
       }
 
       // 创建新实例
-      FT.manager = new TOCManager({
+      window.FloatingTOC.manager = new TOCManager({
         contentId: "floating-toc-content",
         indicatorId: "floating-active-indicator",
         maxLevel: 3,
@@ -300,7 +297,7 @@ const hideSidebarOnPostPage =
       });
 
       // 初始化
-      FT.manager.init();
+      window.FloatingTOC.manager.init();
 
       // 设置点击事件 - 标记为 TOC 内部导航
       const tocContent = document.getElementById("floating-toc-content");
