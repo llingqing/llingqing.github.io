@@ -29,7 +29,6 @@ const path = customPath
 			: `/${slug}`
 		: `/${slug}`;
 const url = `${Astro.site?.href}${path}`;
-const postTitle = post && "title" in post.data ? post.data.title : undefined;
 
 // Extract post title safely (may not exist for all collection types)
 const postTitle = (data as { title?: string })?.title ?? "";
