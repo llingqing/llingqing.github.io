@@ -1,26 +1,36 @@
 ---
 import type { MarkdownHeading } from "astro";
-import TOCStyles from "@/components/common/styles/TOCStyles.astro";
+import "@/styles/toc.css";
+import WidgetLayout from "@/components/common/WidgetLayout.astro";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
-import WidgetLayout from "./WidgetLayout.astro";
+import type { WidgetComponentConfig } from "@/types/config";
 
 interface Props {
 	headings: MarkdownHeading[];
 	class?: string;
 	style?: string;
+	widgetConfig?: WidgetComponentConfig;
 }
 
-const { headings = [], class: className, style } = Astro.props;
+const {
+	headings: _headings = [],
+	class: className,
+	style,
+	widgetConfig,
+} = Astro.props;
+
+const showTitle = widgetConfig?.showTitle !== false;
 ---
 
-<WidgetLayout 
-  name={i18n(I18nKey.tableOfContents)} 
+<WidgetLayout
+  name={i18n(I18nKey.tableOfContents)}
+  showTitle={showTitle}
   id="sidebar-toc"
   class={className}
   style={style}
 >
-  <div class="toc-scroll-container">
+  <div class="toc-scroll-container custom-scrollbar">
     <div
       class="toc-content"
       id="sidebar-toc-content"
@@ -30,16 +40,14 @@ const { headings = [], class: className, style } = Astro.props;
   </div>
 </WidgetLayout>
 
-<TOCStyles />
-
 <style lang="stylus">
 /* SidebarTOC 特定样式 */
 .toc-scroll-container
-	max-height: calc(100vh - 20rem)
+	max-height: calc(100vh - 25rem)
 </style>
 
 <script>
-  import { TOCManager } from "@/utils/tocUtils";
+  import { TOCManager } from "@/utils/toc-utils";
 
   if (typeof window.SidebarTOC === "undefined") {
     window.SidebarTOC = {
@@ -47,38 +55,19 @@ const { headings = [], class: className, style } = Astro.props;
     };
   }
 
-  // Create local reference for type safety
-  const ST = window.SidebarTOC!;
-
   async function initSidebarTOC() {
     const tocContent = document.getElementById("sidebar-toc-content");
     if (!tocContent) return;
 
-    // 检查是否为文章页面
-    const isCurrentlyPostPage = window.location.pathname.includes("/posts/");
-    const sidebarTocWidget = document.getElementById("sidebar-toc");
-    
-    if (!isCurrentlyPostPage) {
-      // 非文章页，隐藏侧边栏目录
-      if (sidebarTocWidget) {
-        sidebarTocWidget.style.display = 'none';
-      }
-      return;
-    } else {
-      // 文章页，显示侧边栏目录
-      if (sidebarTocWidget) {
-        sidebarTocWidget.style.display = '';
-      }
-    }
 
     try {
       // 清理旧实例
-      if (ST.manager) {
-        ST.manager.cleanup();
+      if (window.SidebarTOC.manager) {
+        window.SidebarTOC.manager.cleanup();
       }
 
       // 创建新实例
-      ST.manager = new TOCManager({
+      window.SidebarTOC.manager = new TOCManager({
         contentId: "sidebar-toc-content",
         indicatorId: "sidebar-active-indicator",
         maxLevel: 3,
@@ -86,7 +75,7 @@ const { headings = [], class: className, style } = Astro.props;
       });
 
       // 初始化
-      ST.manager.init();
+      window.SidebarTOC.manager.init();
     } catch (error) {
       console.error("Failed to load TOCManager for SidebarTOC:", error);
     }
@@ -121,5 +110,10 @@ const { headings = [], class: className, style } = Astro.props;
       setTimeout(initSidebarTOC, 100);
     }
     window.tocInternalNavigation = false;
+  });
+
+  // 密码解密后重新初始化 TOC
+  document.addEventListener("password:decrypted", () => {
+    setTimeout(initSidebarTOC, 200);
   });
 </script>

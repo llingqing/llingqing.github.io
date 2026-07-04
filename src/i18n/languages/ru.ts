@@ -6,13 +6,42 @@ export const ru: Translation = {
 	[Key.about]: "О нас",
 	[Key.archive]: "Архив",
 	[Key.search]: "Поиск",
+	[Key.searchNoResults]: "Результаты не найдены.",
+	[Key.searchTypeSomething]: "Введите ключевое слово для поиска...",
+	[Key.searchLoading]: "Поиск...",
+	[Key.searchSummary]: "Резюме",
+	[Key.searchContent]: "Содержание",
+	[Key.searchViewMore]: "Показать еще ({count} шт)",
 	[Key.other]: "Прочее",
+	[Key.all]: "Все",
 
 	[Key.tags]: "Теги",
 	[Key.categories]: "Категории",
+	[Key.allCategories]: "Все категории",
+	[Key.allTags]: "Все теги",
 	[Key.recentPosts]: "Последние посты",
 	[Key.postList]: "Список постов",
 	[Key.tableOfContents]: "Содержание",
+	[Key.tocEmpty]: "На этой странице нет оглавления",
+	[Key.music]: "Музыка",
+	[Key.musicNoPlaying]: "Ничего не воспроизводится",
+	[Key.musicLyrics]: "Текст песни",
+	[Key.musicVolume]: "Громкость",
+	[Key.musicPlayMode]: "Переключить режим воспроизведения",
+	[Key.musicPrev]: "Предыдущий трек",
+	[Key.musicNext]: "Следующий трек",
+	[Key.musicPlaylist]: "Плейлист",
+	[Key.musicNoLyrics]: "Текст песни отсутствует",
+	[Key.musicLoadingLyrics]: "Загрузка текста песни...",
+	[Key.musicFailedLyrics]: "Ошибка загрузки текста песни",
+	[Key.musicNoSongs]: "Нет песен",
+	[Key.musicError]: "Ошибка плеера",
+	[Key.musicPlay]: "Воспроизвести",
+	[Key.musicPause]: "Пауза",
+	[Key.musicProgress]: "Прогресс воспроизведения",
+	[Key.musicCover]: "Обложка",
+	[Key.musicNoCover]: "Нет обложки",
+	[Key.musicAudioPlayer]: "Аудиоплеер",
 
 	// Объявление
 	[Key.announcement]: "Объявление",
@@ -27,6 +56,8 @@ export const ru: Translation = {
 	[Key.friends]: "Ссылки",
 	[Key.friendsDescription]:
 		"Вот мои друзья, добро пожаловать посетить и общаться друг с другом",
+	[Key.searchFriends]: "Поиск друзей...",
+	[Key.friendsEmpty]: "Друзей пока нет.",
 	[Key.guestbook]: "Гостевая книга",
 	[Key.guestbookDescription]:
 		"Добро пожаловать, оставьте свой след здесь, поделитесь своими мыслями и предложениями",
@@ -40,6 +71,8 @@ export const ru: Translation = {
 	[Key.minutesCount]: "минуты",
 	[Key.postCount]: "пост",
 	[Key.postsCount]: "постов",
+	[Key.tagsCount]: "тегов",
+	[Key.noData]: "Нет данных",
 
 	[Key.themeColor]: "Цвет темы",
 
@@ -48,9 +81,12 @@ export const ru: Translation = {
 	[Key.systemMode]: "Система",
 
 	[Key.more]: "Ещё",
+	[Key.collapse]: "Свернуть",
 
 	[Key.author]: "Автор",
 	[Key.publishedAt]: "Опубликовано",
+	[Key.updatedAt]: "Обновлено",
+	[Key.readTime]: "Время чтения",
 	[Key.license]: "Лицензия",
 	[Key.bangumi]: "Бангуми",
 
@@ -63,17 +99,38 @@ export const ru: Translation = {
 	[Key.bangumiFilterWish]: "Хочу",
 	[Key.bangumiFilterOnHold]: "Отложено",
 	[Key.bangumiFilterDropped]: "Брошено",
+	[Key.bangumiFilterGamePlayed]: "Пройдено",
+	[Key.bangumiFilterGamePlaying]: "Играю",
+	[Key.bangumiFilterGameWish]: "Хочу сыграть",
+	[Key.bangumiFilterBookRead]: "Прочитано",
+	[Key.bangumiFilterBookReading]: "Читаю",
+	[Key.bangumiFilterBookWish]: "Хочу прочитать",
+	[Key.bangumiFilterMusicListened]: "Прослушано",
+	[Key.bangumiFilterMusicListening]: "Слушаю",
+	[Key.bangumiFilterMusicWish]: "Хочу послушать",
 	[Key.bangumiStatusWish]: "Хочу",
 	[Key.bangumiStatusWatched]: "Просмотрено",
 	[Key.bangumiStatusWatching]: "Смотрю",
 	[Key.bangumiStatusOnHold]: "Отложено",
 	[Key.bangumiStatusDropped]: "Брошено",
+	[Key.bangumiStatusGameWish]: "Хочу сыграть",
+	[Key.bangumiStatusGamePlayed]: "Пройдено",
+	[Key.bangumiStatusGamePlaying]: "Играю",
+	[Key.bangumiStatusBookWish]: "Хочу прочитать",
+	[Key.bangumiStatusBookRead]: "Прочитано",
+	[Key.bangumiStatusBookReading]: "Читаю",
+	[Key.bangumiStatusMusicWish]: "Хочу послушать",
+	[Key.bangumiStatusMusicListened]: "Прослушано",
+	[Key.bangumiStatusMusicListening]: "Слушаю",
 	[Key.bangumiStatusUnknown]: "Неизвестно",
 	[Key.bangumiNoData]: "Нет данных",
 	[Key.bangumiNoDataDescription]: "В этой категории нет элементов",
 	[Key.bangumiEmpty]: "Нет данных",
 	[Key.bangumiEmptyReason]:
 		"Возможные причины: имя пользователя не существует, проблема с подключением к сети или ограничение API",
+	[Key.bangumiFetchError]: "Ошибка загрузки данных Bangumi",
+	[Key.bangumiFetchErrorDesc]:
+		"Не удалось загрузить данные из Bangumi API при сборке. Эта страница временно недоступна.",
 	[Key.bangumiUsername]: "Имя пользователя",
 	[Key.bangumiApi]: "API",
 	[Key.bangumiConfigTip]:
@@ -95,6 +152,46 @@ export const ru: Translation = {
 	[Key.bangumiLastUpdated]: "Данные обновлены",
 	[Key.bangumiUpdatedAt]: "Время сборки",
 	[Key.bangumiDataStatic]: "Статические данные",
+
+	// Отслеживание аниме
+	[Key.anime]: "Аниме",
+	[Key.animeSubtitle]:
+		"Мой список отслеживания аниме, данные из Bilibili и TMDB",
+	[Key.animeTotal]: "Всего",
+	[Key.animeAverageRating]: "Средний рейтинг",
+	[Key.animeSearch]: "Поиск аниме...",
+	[Key.animeAllTypes]: "Все",
+	[Key.animeTV]: "TV Аниме",
+	[Key.animeMovie]: "Фильм",
+	[Key.animeRatingDesc]: "По рейтингу ↓",
+	[Key.animeRatingAsc]: "По рейтингу ↑",
+	[Key.animeDateDesc]: "Сначала новые",
+	[Key.animeDateAsc]: "Сначала старые",
+	[Key.animeNoResults]: "Аниме не найдено",
+	[Key.animeLastUpdated]: "Данные обновлены",
+	[Key.animeSource]: "Источник",
+	[Key.animeEpStatus]: "Прогресс",
+	[Key.animeViewDetails]: "Подробнее",
+	[Key.animeNotConfigured]: "Источник данных не настроен",
+	[Key.animeNotConfiguredDesc]:
+		"Настройте Bilibili UID или TMDB API Key в src/config/siteConfig.ts",
+	[Key.animeBilibiliAvg]: "Bilibili ср.",
+	[Key.animeTmdbAvg]: "TMDB ср.",
+	[Key.animeDualSynced]: "Два источника",
+	[Key.animeNoOverview]: "Нет описания",
+	[Key.animeClose]: "Закрыть",
+	[Key.animeSynopsis]: "Описание",
+	[Key.animeWatchNow]: "Смотреть",
+	[Key.animeViewTmdb]: "Подробнее на TMDB",
+	[Key.animeAllWithCount]: "Все ({count})",
+	[Key.animeTVWithCount]: "ТВ ({count})",
+	[Key.animeMovieWithCount]: "Фильм ({count})",
+	[Key.animeTypeAnime]: "Аниме",
+	[Key.animeTypeMovie]: "Фильм",
+	[Key.animeTypeDocumentary]: "Документальный",
+	[Key.animeTypeChinese]: "Китайское аниме",
+	[Key.animeTypeDrama]: "Сериал",
+	[Key.animeTypeConcert]: "Концерт",
 
 	// Пагинация
 	[Key.paginationFirst]: "Первая",
@@ -155,11 +252,41 @@ export const ru: Translation = {
 	// Закреплено
 	[Key.pinned]: "Закреплено",
 
+	// Похожие статьи
+	[Key.relatedPosts]: "Похожие статьи",
+	[Key.randomPosts]: "Случайные статьи",
+	[Key.smartRecommend]: "Умный",
+	[Key.randomRecommend]: "Случайный",
+	[Key.noRelatedPosts]: "Нет похожих статей",
+	[Key.noRandomPosts]: "Нет случайных статей",
+
+	// Зашифровано
+	[Key.postEncrypted]: "Эта статья зашифрована",
+
 	// Режим обоев
 	[Key.wallpaperMode]: "Режим обоев",
 	[Key.wallpaperBannerMode]: "Баннер обои",
-	[Key.wallpaperOverlayMode]: "Обои на весь экран",
+	[Key.wallpaperFullscreenMode]: "Полноэкранные обои",
+	[Key.wallpaperOverlayMode]: "Прозрачный",
 	[Key.wallpaperNoneMode]: "Однотонный фон",
+
+	// Настройки обоев
+	[Key.wallpaperSettings]: "Настройки обоев",
+	[Key.wallpaperTitle]: "Заголовок главных обоев",
+	[Key.wallpaperCarousel]: "Карусель обоев",
+	[Key.wavesAnimation]: "Анимация волн",
+	[Key.gradientTransition]: "Градиентный переход",
+	[Key.sakuraEffect]: "Эффект сакуры",
+	[Key.effectsSettings]: "Настройки эффектов",
+	[Key.overlaySettings]: "Настройки прозрачности",
+	[Key.overlayOpacity]: "Прозрачность обоев",
+	[Key.overlayBlur]: "Размытие фона",
+	[Key.overlayCardOpacity]: "Прозрачность карточек",
+
+	// Макет списка сообщений
+	[Key.postListLayout]: "Макет списка сообщений",
+	[Key.postListLayoutList]: "Список",
+	[Key.postListLayoutGrid]: "Сетка",
 
 	// Страница спонсоров
 	[Key.sponsor]: "Спонсор",
@@ -175,9 +302,13 @@ export const ru: Translation = {
 	[Key.sponsorAnonymous]: "Анонимно",
 	[Key.scanToSponsor]: "Сканировать для поддержки",
 	[Key.sponsorGoTo]: "Перейти к спонсору",
-	[Key.sponsorButton]: "Поддержка",
+	[Key.sponsorButton]: "Поддержка и Поделиться",
 	[Key.sponsorButtonText]:
-		"Если эта статья вам помогла, добро пожаловать поддержать!",
+		"Если эта статья помогла вам, пожалуйста, поделитесь или поддержите!",
+
+	[Key.shareOnSocial]: "Поделиться статьей",
+	[Key.shareOnSocialDescription]:
+		"Если эта статья помогла вам, пожалуйста, поделитесь ею с другими!",
 
 	// Статистика сайта
 	[Key.siteStats]: "Статистика сайта",
@@ -189,6 +320,21 @@ export const ru: Translation = {
 	[Key.siteStatsLastUpdate]: "Последняя активность",
 	[Key.siteStatsDaysAgo]: "{days} дней назад",
 	[Key.siteStatsDays]: "{days} дней",
+	[Key.today]: "Сегодня",
+
+	// Информация о сайте
+	[Key.siteInfo]: "Информация о сайте",
+	[Key.siteInfoBuildTime]: "Время сборки",
+	[Key.siteInfoBuildPlatform]: "Платформа сборки",
+	[Key.siteInfoBlogVersion]: "Версия блога",
+	[Key.siteInfoAstroVersion]: "Astro",
+	[Key.siteInfoNodeVersion]: "Node",
+	[Key.siteInfoPnpmVersion]: "pnpm",
+	[Key.siteInfoSystem]: "Система",
+	[Key.siteInfoExpand]: "Показать информацию о сборке",
+	[Key.siteInfoCollapse]: "Скрыть информацию о сборке",
+	[Key.siteInfoDomain]: "Домен",
+	[Key.siteInfoLicense]: "Лицензия",
 
 	// Компонент календаря
 	[Key.calendarSunday]: "Вс",
@@ -210,4 +356,47 @@ export const ru: Translation = {
 	[Key.calendarOctober]: "Окт",
 	[Key.calendarNovember]: "Ноя",
 	[Key.calendarDecember]: "Дек",
+	[Key.calendar]: "Календарь сайта",
+	[Key.calendarHeatmapWeek]: "Неделя {week} {month}, {count} записей",
+	[Key.advertisement]: "Реклама",
+
+	[Key.shareArticle]: "Поделиться",
+	[Key.generatingPoster]: "Создание постера...",
+	[Key.copied]: "Скопировано",
+	[Key.copyLink]: "Копировать ссылку",
+	[Key.savePoster]: "Сохранить постер",
+	[Key.scanToRead]: "Сканируйте, чтобы прочитать",
+
+	// Конфигурация блоков коллапсируемого кода
+	[Key.codeCollapsibleShowMore]: "Развернуть",
+	[Key.codeCollapsibleShowLess]: "Свернуть",
+	[Key.codeCollapsibleExpanded]: "Блок кода развернут",
+	[Key.codeCollapsibleCollapsed]: "Блок кода свернут",
+
+	// Страница галереи
+	[Key.gallery]: "Галерея",
+	[Key.galleryDescription]: "Запечатлеть прекрасные моменты жизни",
+	[Key.galleryPhotos]: "фото",
+	[Key.galleryAlbums]: "альбомов",
+	[Key.galleryNoAlbums]: "Пока нет альбомов",
+	[Key.galleryBackToAlbums]: "Вернуться к альбомам",
+	[Key.searchAlbums]: "Поиск альбомов...",
+
+	// Защита паролем
+	[Key.passwordProtected]: "Защищено паролем",
+	[Key.passwordProtectedDesc]:
+		"Этот контент защищён паролем. Пожалуйста, введите пароль для просмотра.",
+	[Key.passwordHint]: "Подсказка",
+	[Key.passwordPlaceholder]: "Введите пароль",
+	[Key.passwordSubmit]: "Разблокировать",
+	[Key.passwordError]: "Неверный пароль, попробуйте снова.",
+	[Key.passwordProtectedRss]:
+		"Эта статья зашифрована. Пожалуйста, посетите сайт для просмотра.",
+
+	// Фоновый видеоплеер
+	[Key.videoPlay]: "Воспроизвести фоновое видео",
+	[Key.videoPause]: "Пауза фонового видео",
+	[Key.videoPrev]: "Предыдущее видео",
+	[Key.videoNext]: "Следующее видео",
+	[Key.videoLoadError]: "Не удалось загрузить видео",
 };
