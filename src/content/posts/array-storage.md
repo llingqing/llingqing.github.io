@@ -1,6 +1,7 @@
 ---
 title: 多维数组的存储
-tags: [数据结构, 考研, 408, 数组, 存储]
+tags: [数据结构, 考研, 数组, 存储, 博客]
+
 published: 2026-07-04
 category: 数据结构
 draft: false

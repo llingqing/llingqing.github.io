@@ -1,6 +1,6 @@
 ---
 title: 算法分析
-tags: [数据结构, 考研, 408, 算法分析, 复杂度]
+tags: [数据结构, 考研, 算法分析, 复杂度, 博客]
 published: 2026-07-04
 category: 数据结构
 draft: false

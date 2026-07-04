@@ -1,6 +1,6 @@
 ---
 title: 链表
-tags: [数据结构, 考研, 408, 线性表, 链式存储]
+tags: [数据结构, 考研, 线性表, 链式存储, 博客]
 published: 2026-07-04
 category: 数据结构
 draft: false
