@@ -1,16 +1,24 @@
-import type { SiteConfig } from "@/types/config";
-import { fontConfig } from "./fontConfig";
+import type { SiteConfig } from "@/types/siteConfig";
 
 // 定义站点语言
 // 语言代码，例如：'zh_CN', 'zh_TW', 'en', 'ja', 'ru'。
 const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
+	// 站点标题
 	title: "lingluoa",
-	subtitle: "个人博客",
+
+	// 站点副标题
+	subtitle: "lingluoa的博客",
+
+	// 站点 URL
 	site_url: "https://llingqing.github.io",
+
+	// 站点描述
 	description:
 		"Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
+
+	// 站点关键词
 	keywords: [
 		"Firefly",
 		"Fuwari",
@@ -21,161 +29,163 @@ export const siteConfig: SiteConfig = {
 		"静态博客",
 	],
 
-	lang: SITE_LANG,
-
+	// 主题色
 	themeColor: {
-		hue: 165, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		fixed: false, // 对访问者隐藏主题色选择器
-		defaultMode: "system", // 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
+		// 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+		hue: 165,
+		// 是否对访问者隐藏主题色选择器
+		fixed: false,
+		// 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
+		defaultMode: "system",
 	},
 
+	// 页面整体宽度（单位：rem）
+	// 数值越大可以让页面内容区域更宽
+	// 在使用单侧栏边栏时，建议调低一些宽度以获得更好的视觉效果。
+	pageWidth: 100,
+
+	// 网站Card样式配置
+	card: {
+		// 是否开启卡片边框和阴影，开启后让网站更有立体感
+		border: true,
+		// 是否让卡片风格跟随主题色相
+		followTheme: false,
+	},
+
+	// Favicon 配置
 	favicon: [
-		// 留空以使用默认 favicon
 		{
-			src: "/assets/images/favicon.ico", // 图标文件路径
-			theme: "dark", // 可选，指定主题 'light' | 'dark'
-			sizes: "32x32", // 可选，图标大小
+			// 图标文件路径
+			src: "/favicon/favicon.ico",
+			// 可选，指定主题 'light' | 'dark'
+			// theme: "light",
+			// 可选，图标大小
+			// sizes: "32x32",
 		},
 	],
 
-	// 导航栏Logo
-	// navbarLogo 支持三种类型：Astro图标库，本地图片，网络图片
-	// { type: "icon", value: "material-symbols:home-pin-outline" }
-	// { type: "image", value: "/assets/images/logo.webp", alt: "Firefly Logo" }
-	// { type: "image", value: "https://example.com/logo.png", alt: "Firefly Logo" }
-	navbarLogo: {
-		type: "image",
-		value: "/assets/images/LiuYingPure3.svg",
-		alt: "🍀",
+	// 导航栏配置
+	navbar: {
+		// 导航栏Logo
+		// 支持三种类型：
+		// 1. Astro图标库: { type: "icon", value: "material-symbols:home-pin-outline" }
+		// 2. 本地图片（public目录，不优化）: { type: "image", value: "/assets/images/logo.webp", alt: "Logo" }
+		// 3. 本地图片（src目录，自动优化但会增加构建时间）: { type: "image", value: "assets/images/logo.webp", alt: "Logo" }
+		// 4. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Logo" }
+		logo: {
+			type: "image",
+			value: "assets/images/firefly.png",
+			alt: "🍀",
+		},
+		// 导航栏标题
+		title: "Firefly",
+		// 全宽导航栏，导航栏是否占满屏幕宽度
+		widthFull: false,
+		// 导航菜单对齐方式，left：左对齐，center：居中
+		menuAlign: "center",
+		// 导航栏图标和标题是否跟随主题色
+		followTheme: false,
+		// 导航栏是否固定在顶部并始终可见
+		stickyNavbar: true,
 	},
-	navbarTitle: "Firefly", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
 
 	// 站点开始日期，用于统计运行天数
-	siteStartDate: "2025-11-28", // 请修改为你的站点实际开始日期，格式：YYYY-MM-DD
+	siteStartDate: "2025-11-28",
 
-	// bangumi配置
-	bangumi: {
-		userId: "1163581", // 在此处设置你的Bangumi用户ID
-	},
+	// 站点时区（IANA 时区字符串），用于格式化bangumi、rss里的构建日期时间等等..
+	// 示例："Asia/Shanghai", "UTC", 如果为空，则按照构建服务器的时区进行时区转换
+	timezone: "Asia/Shanghai",
 
-	// 文章页底部的"上次编辑时间"卡片开关
-	showLastModified: true,
-
-	// OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
-	generateOgImages: false,
-
-	// 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
-	// bangumi的数据为编译时获取的，所以不是实时数据，请配置bangumi.userId
+	// 页面开关配置 - 控制特定页面的访问权限，设为false会返回404并自动隐藏对应的导航栏菜单项
 	pages: {
-		sponsor: false, // 赞助页面开关
-		guestbook: false, // 留言板页面开关，需要配置评论系统
-		bangumi: false, // 番组计划页面开关，含追番和游戏，dev调试时只获取一页数据，build才会获取全部数据
+		// 友链页面开关
+		friends: true,
+		// 打赏页面开关
+		sponsor: false,
+		// 留言板页面开关，需要配置评论系统
+		guestbook: false,
+		// 番组计划页面开关，含追番、游戏、书籍和音乐
+		bangumi: false,
+		// 相册页面开关
+		gallery: false,
+		// 追番页面开关
+		anime: false,
 	},
+
+	// 分类导航栏开关，在首页和归档页顶部显示分类快捷导航
+	categoryBar: true,
+
+	// 归档页是否折叠非最新年份文章，禁用后默认展开全部年份
+	foldArticle: true,
 
 	// 文章列表布局配置
 	postListLayout: {
-		// 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（双列布局）
-		// 如果sidebarConfig.ts中侧边栏配置启用了"both"双侧边栏，则无法使用文章列表"grid"网格（双列）布局
+		// 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（多列布局）
 		defaultMode: "list",
+		// 移动端默认布局模式，不设置则跟随 defaultMode
+		mobileDefaultMode: "list",
+		// 是否在文章列表中显示标签
+		showTags: true,
+		// 文章简介显示行数，设为 0 则不截断
+		descriptionLines: 2,
 		// 是否允许用户切换布局
 		allowSwitch: true,
+		// 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效
+		grid: {
+			// 是否开启瀑布流布局，同时有封面图和无封面图的混合文章推荐开启
+			masonry: false,
+			// 网格模式卡片最小宽度(px)，浏览器根据容器宽度自动计算列数
+			columnWidth: 320,
+		},
 	},
+
+	// 文章内容页配置
+	post: {
+		// 提醒框（Admonitions）配置，修改后需要重启开发服务器才能生效
+		// 主题：'github' | 'obsidian' | 'vitepress' | 'docusaurus'，每个主题风格和语法不同，可根据喜好选择
+		rehypeCallouts: {
+			theme: "github",
+			// 是否启用兼容 Python-Markdown 风格的 admonition 语法（!!!和???语法）
+			// 注意：只有 theme 配置成 obsidian 主题才能基本支持这些语法，其他主题会有样式问题或不兼容的情况
+			enablePythonMarkdownAdmonitions: false,
+		},
+		// 文章页底部的"上次编辑时间"卡片开关
+		showLastModified: true,
+		// 文章过期阈值（天数），超过此天数才显示"上次编辑"卡片
+		outdatedThreshold: 30,
+		// 是否开启分享海报生成功能
+		sharePoster: true,
+		// OpenGraph图片功能，注意开启后要渲染很长时间，不建议本地调试的时候开启
+		generateOgImages: false,
+	},
+
+
 
 	// 分页配置
 	pagination: {
 		// 每页显示的文章数量
-		postsPerPage: 8,
+		postsPerPage: 10,
 	},
 
-	backgroundWallpaper: {
-		// 壁纸模式："banner" 横幅壁纸，"overlay" 全屏壁纸，"none" 纯色背景无壁纸
-		mode: "banner",
-		// 是否允许用户通过导航栏切换壁纸模式，设为false可提升性能（只渲染当前模式）
-		switchable: false,
-
-		// 背景图片配置
-		src: {
-			// 桌面背景图片
-			desktop: "/assets/images/d1.webp",
-			// 移动背景图片
-			mobile: "/assets/images/m3.webp",
-		},
-
-		// Banner模式特有配置
-		banner: {
-			// 图片位置
-			// 支持所有CSS object-position值，如: 'top', 'center', 'bottom', 'left top', 'right bottom', '25% 75%', '10px 20px'..
-			// 如果不知道怎么配置百分百之类的配置，推荐直接使用：'center'居中，'top'顶部居中，'bottom' 底部居中，'left'左侧居中，'right'右侧居中
-			position: "0% 20%",
-
-			homeText: {
-				// 主页显示自定义文本（全局开关）
-				enable: true,
-				// 主页横幅主标题
-				title: "Lovely firefly!",
-				// 主页横幅副标题
-				subtitle: [
-					"In Reddened Chrysalis, I Once Rest",
-					"From Shattered Sky, I Free Fall",
-					"Amidst Silenced Stars, I Deep Sleep",
-					"Upon Lighted Fyrefly, I Soon Gaze",
-					"From Undreamt Night, I Thence Shine",
-					"In Finalized Morrow, I Full Bloom",
-				],
-				typewriter: {
-					//打字机开启 → 循环显示所有副标题
-					//打字机关闭 → 每次刷新随机显示一条副标题
-					enable: false, // 启用副标题打字机效果
-					speed: 100, // 打字速度（毫秒）
-					deleteSpeed: 50, // 删除速度（毫秒）
-					pauseTime: 2000, // 完全显示后的暂停时间（毫秒）
-				},
-			},
-			credit: {
-				enable: {
-					desktop: true, // 桌面端显示横幅图片来源文本
-					mobile: true, // 移动端显示横幅图片来源文本
-				},
-				// text: {
-				//   desktop: "Pixiv - 晚晚喵", // 桌面端要显示的来源文本
-				//   mobile: "Pixiv - KiraraShss", // 移动端要显示的来源文本
-				// },
-				url: {
-					desktop: "https://www.pixiv.net/artworks/135490046", // 桌面端原始艺术品或艺术家页面的 URL 链接
-					mobile: "https://www.pixiv.net/users/42715864", // 移动端原始艺术品或艺术家页面的 URL 链接
-				},
-			},
-			navbar: {
-				transparentMode: "semifull", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
-			},
-			// 波浪动画效果配置，开启可能会影响页面性能，请根据实际情况开启
-			waves: {
-				enable: {
-					desktop: true, // 桌面端启用波浪动画效果
-					mobile: true, // 移动端启用波浪动画效果
-				},
-				performance: {
-					quality: "medium",
-					hardwareAcceleration: true, // 是否启用硬件加速
-				},
-				// 性能优化说明：
-				// quality: "high" - 最佳视觉效果，但GPU占用较高，适合高性能设备
-				// quality: "medium" - 平衡性能和质量，适合中等性能设备
-				// quality: "low" - 最低GPU占用，动画更简单，适合低性能设备
-				// hardwareAcceleration: true - 启用GPU加速，提升性能但增加GPU占用
-				// hardwareAcceleration: false - 禁用GPU加速，降低GPU占用但可能影响性能
-			},
-		},
-
-		// 全屏透明覆盖模式特有配置
-		overlay: {
-			zIndex: -1, // 层级，确保壁纸在背景层
-			opacity: 0.8, // 壁纸透明度
-			blur: 1, // 背景模糊程度
-		},
+	// 图像优化及响应式配置
+	// 图像优化压缩只保留avif或webp
+	// 响应式图像是为在不同设备上提高性能而调整的图像。这些图像可以调整大小以适应其容器，并且可以根据访问者的屏幕尺寸和分辨率以不同的大小提供。
+	// Astro 仅能对 src 目录下的图像进行优化，src 目录下的图像越多，构建时间会越长
+	// Astro 图像文档 https://docs.astro.build/zh-cn/guides/images/
+	imageOptimization: {
+		// 输出图片格式
+		// - "avif": 仅输出 AVIF 格式（最新技术，最小体积，目前兼容性较低）
+		// - "webp": 仅输出 WebP 格式（体积适中，兼容性好）
+		// - "both": 同时输出 AVIF 和 WebP（推荐，浏览器自动选择最佳格式）
+		formats: "webp",
+		// 图片压缩质量 (1-100)，值越低体积越小但质量越差，推荐 70-85
+		quality: 85,
+		// 为特定域名的图片添加 referrerpolicy="no-referrer" 属性
+		// 支持通配符 *，例如：["i0.hdslb.com", "*.bilibili.com"]
+		// 可解决指定域名图片加载时的 403 问题（如防盗链图片）
+		noReferrerDomains: ["*.hdslb.com", "*.bilibili.com"],
 	},
 
-	// 字体配置
-	// 在src/config/fontConfig.ts中配置具体字体
-	font: fontConfig,
+	// 站点语言，在本配置文件顶部SITE_LANG定义
+	lang: SITE_LANG,
 };

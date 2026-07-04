@@ -9,7 +9,7 @@ interface Props {
 
 const { identifier, url, title } = Astro.props;
 
-if (!commentConfig || !commentConfig.disqus) {
+if (!commentConfig?.disqus) {
 	throw new Error("Disqus comments are not configured");
 }
 const shortname = commentConfig.disqus.shortname;
@@ -19,7 +19,7 @@ const shortname = commentConfig.disqus.shortname;
 
 <script is:inline define:vars={{ shortname, identifier, url, title }}>
   // @ts-ignore
-  var disqus_config = function () {
+  window.disqus_config = function () {
     this.page.url = url
     this.page.identifier = identifier
     this.page.title = title

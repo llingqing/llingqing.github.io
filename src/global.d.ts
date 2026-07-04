@@ -5,33 +5,12 @@ declare global {
 		};
 	}
 
-	interface IconifyLoader {
-		isLoaded?: boolean;
-		load: () => Promise<void>;
-		onLoad: (cb: () => void) => void;
-		addToPreloadQueue: (icons: string[]) => void;
-	}
-
-	interface FloatingTOCGlobal {
-		btn?: HTMLElement | null;
-		panel?: HTMLElement | null;
-		manager?: any;
-		isPostPage?: () => boolean;
-	}
-
-	interface SidebarTOCGlobal {
-		manager?: any;
-	}
-
-	interface SpineGlobal {
-		SpinePlayer?: any;
-	}
-
 	interface Window {
-		// Define swup type directly since @swup/astro doesn't export AstroIntegration
+		// biome-ignore lint/suspicious/noExplicitAny: External library
 		swup: any;
-		live2dModelInitialized?: boolean;
 		spineModelInitialized?: boolean;
+		floatingTOCListenersInitialized?: boolean;
+		// biome-ignore lint/suspicious/noExplicitAny: External library
 		spinePlayerInstance?: any;
 		pagefind: {
 			search: (query: string) => Promise<{
@@ -40,28 +19,55 @@ declare global {
 				}>;
 			}>;
 		};
+		__fireflyMusic?: {
+			init: () => Promise<void>;
+			getState: () => {
+				playlist: Array<{
+					name: string;
+					artist: string;
+					url: string;
+					pic: string;
+					lrc?: string;
+				}>;
+				currentIndex: number;
+				track: {
+					name: string;
+					artist: string;
+					url: string;
+					pic: string;
+					lrc?: string;
+				} | null;
+				isPlaying: boolean;
+				playMode: number;
+				volume: number;
+				isMuted: boolean;
+				currentTime: number;
+				duration: number;
+				progress: number;
+				currentTimeStr: string;
+				durationStr: string;
+				lyrics: Array<{ time: number; text: string }>;
+				currentLrcIndex: number;
+				initialized: boolean;
+				error: string | null;
+				config: Record<string, unknown>;
+			};
+			togglePlay: () => void;
+			playNext: () => void;
+			playPrev: () => void;
+			cyclePlayMode: () => void;
+			setVolume: (val: number) => void;
+			toggleMute: () => void;
+			seek: (percent: number) => void;
+			seekToTime: (time: number) => void;
+			playTrackByIndex: (index: number) => void;
+			loadTrack: (index: number, autoPlay: boolean) => void;
+		};
+	}
 
-		// Iconify loader
-		iconifyLoaded?: boolean;
-		__iconifyLoader?: IconifyLoader;
-		onIconifyReady?: (cb: () => void) => void;
-		preloadIcons?: (icons: string[]) => void;
-		loadIconify?: () => void;
-
-		// TOC related
-		FloatingTOC?: FloatingTOCGlobal;
-		SidebarTOC?: SidebarTOCGlobal;
-		tocInternalNavigation?: boolean;
-		toggleFloatingTOC?: () => void;
-
-		// Announcement
-		closeAnnouncement?: () => void;
-
-		// Spine
-		spine?: SpineGlobal;
-
-		// Allow dynamic properties
-		[key: string]: any;
+	interface MediaQueryList {
+		addListener(listener: (e: MediaQueryListEvent) => void): void;
+		removeListener(listener: (e: MediaQueryListEvent) => void): void;
 	}
 }
 
@@ -91,4 +97,4 @@ interface SearchResult {
 	sub_results?: SearchResult[];
 }
 
-export { SearchResult };
+export type { SearchResult };
