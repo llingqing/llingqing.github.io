@@ -6,7 +6,9 @@ published: 2026-07-04
 category: 数据结构
 draft: false
 ---
-
+:::warning
+含AI生成内容
+:::
 # 多维数组的存储
 
 ## 为什么数组在"栈、队列和数组"这一章
@@ -176,9 +178,3 @@ $$\text{offset}(i_1, i_2, \ldots, i_n) = \sum_{k=1}^{n} i_k \cdot \prod_{p=k+1}^
 - ⭐ base 陷阱（0-based vs 1-based）
 - 三维数组地址计算
 - 行优先 vs 列优先的本质区别（哪个下标变化最快）
-
-## 关联页面
-
-- [[20.wiki/02.concepts/matrix-compression.md|特殊矩阵的压缩存储]] — 数组存储的实际应用
-- [[20.wiki/04.sources-summary/stack-queue-array.md|栈、队列和数组 — 资料摘要]] — 本章完整摘要
-- [[20.wiki/04.sources-summary/linear-list.md|线性表 — 资料摘要]] — 顺序表（数组实现的线性表）

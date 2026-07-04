@@ -5,7 +5,9 @@ published: 2026-07-04
 category: 数据结构
 draft: false
 ---
-
+:::warning
+含AI生成内容
+:::
 # 链表
 
 ## 链式存储的核心特点
@@ -277,8 +279,8 @@ void Free_SL(SLinkList space, int k) {
 
 链表的变体在实际工程中有广泛应用：
 
-- [[20.wiki/02.concepts/stack.md|栈（Stack）]]的链式实现——**链栈**：以链表头部作为栈顶，入栈/出栈均为 O(1)
-- [[20.wiki/02.concepts/queue.md|队列（Queue）]]的链式实现——**链式队列**：头指针 front 指向头结点，尾指针 rear 指向尾结点，入队 O(1)、出队 O(1)
+- 栈（Stack）的链式实现——**链栈**：以链表头部作为栈顶，入栈/出栈均为 O(1)
+- 队列（Queue）的链式实现——**链式队列**：头指针 front 指向头结点，尾指针 rear 指向尾结点，入队 O(1)、出队 O(1)
 - 操作系统进程调度：循环链表实现时间片轮转（Round-Robin）调度
 - 内存管理：空闲块链表（free list）管理动态内存分配
 - LRU 缓存：结合哈希表的双向链表实现 O(1) 的缓存淘汰
@@ -300,12 +302,3 @@ void Free_SL(SLinkList space, int k) {
 - 循环链表遍历的终止条件（`p != L`）
 
 ---
-
-## 关联页面
-
-- [[20.wiki/02.concepts/algorithm-analysis.md|算法分析]] — 复杂度分析方法，为链表操作提供理论基础
-- [[20.wiki/02.concepts/sequential-list.md|顺序表（Sequential List）]] — 顺序存储实现，与链表对比的经典参照
-- [[20.wiki/02.concepts/stack.md|栈（Stack）]] — 链栈：链表的栈式应用
-- [[20.wiki/02.concepts/queue.md|队列（Queue）]] — 链式队列：链表的队列式应用
-- [[10.sources/数据结构.md|数据结构绪论 — 原始资料]] — 链式存储结构的一般概念
-- [[10.sources/线性表.md|线性表 — 原始资料]] — 四种链表的操作详解与复杂度分析
