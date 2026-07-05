@@ -32,6 +32,15 @@ export const friendsConfig: FriendLink[] = [
 		enabled: false, // 是否启用
 	},
 	{
+		title: "Par1y",
+		imgurl: "https://www.zooombie.icu/_astro/avatar.Dx5W8pOY_Jvlzn.webp",
+		desc: "大佬",
+		siteurl: "https://www.zooombie.icu/",
+		tags: ["Blog"],
+		weight: 10, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
+	{
 		title: "Firefly Docs",
 		imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
 		desc: "Firefly主题模板文档",

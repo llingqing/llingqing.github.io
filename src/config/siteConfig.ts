@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "lingluoa的博客",
 
 	// 站点 URL
-	site_url: "https://llingqing.github.io",
+	site_url: "https://lingluoa.dpdns.org/",
 
 	// 站点描述
 	description:

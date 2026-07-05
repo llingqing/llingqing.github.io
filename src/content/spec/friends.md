@@ -4,9 +4,6 @@ description: "与优秀的朋友们一起成长"
 ---
 
 ---
-:::note
-- **⭐ 很厉害的大佬[https://www.zooombie.icu/](https://www.zooombie.icu/)**
-:::
 ## ✉️申请友链
 
 请将您的网站信息发送邮件至：`xxx@xxx.com`

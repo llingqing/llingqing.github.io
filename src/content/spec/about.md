@@ -1,6 +1,6 @@
 # 关于我 / About Me
 
-你好！我是 **lingluoa** ，一个密码学菜鸡。
+你好！我是 **lingluoa**,积极备战考研中，不定期更新博客。
 
 ## 🛠️ 关于本站
 
@@ -29,7 +29,7 @@
 如果你想和我交流技术问题，分享有趣的想法，或者只是想打个招呼，欢迎通过以下方式联系我：
 
 - 💻 **GitHub**: [llingqing](https://github.com/llingqing)
-<!-- - ✉️ **Email**: [xiaye@msn.com](mailto:xiaye@msn.com) -->
+- ✉️ **Email**: [lingluoa@qq.com](mailto:lingluoa@qq.com)
 
 ---
 
