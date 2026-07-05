@@ -3,7 +3,6 @@ title: 栈（Stack）
 tags: [数据结构, 考研, 栈]
 published: 2026-07-05
 category: 数据结构
-draft: false
 ---
 :::warning
 含AI生成内容
