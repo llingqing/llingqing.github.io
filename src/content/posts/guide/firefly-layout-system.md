@@ -17,7 +17,7 @@ Firefly 提供了灵活的布局系统，允许您根据内容需求和个人喜
 ---
 
 [grid]
-![左侧边栏+列表布局](left-list.avif)
+![左侧边栏+列表布局](src/content/posts/images/left-list.avif)
 ![右侧边栏+网格布局](right-grid2.avif)
 ![左侧边栏+三列网格布局](left-grid3.avif)
 [/grid]
