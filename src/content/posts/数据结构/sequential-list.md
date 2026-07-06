@@ -161,7 +161,3 @@ int LocateElem(SqList L, ElemType e) {
 - 静态分配与动态分配的区别
 
 ---
-## 关联页面
-
-- [[algorithm-analysis.md|算法分析]] — 复杂度分析方法，顺序表的复杂度推导基础
-- [[linked-list.md|链表（Linked List）]] — 链式存储实现，与顺序表进行对比

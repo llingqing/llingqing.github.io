@@ -178,6 +178,3 @@ $$\text{offset}(i_1, i_2, \ldots, i_n) = \sum_{k=1}^{n} i_k \cdot \prod_{p=k+1}^
 - 三维数组地址计算
 - 行优先 vs 列优先的本质区别（哪个下标变化最快）
 
-## 关联页面
-
-- [[matrix-compression|特殊矩阵的压缩存储]] — 数组存储的实际应用

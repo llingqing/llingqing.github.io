@@ -243,8 +243,3 @@ bool DeQueue(LinkQueue *Q, int *x) {
 - ⭐ 输入受限 vs 输出受限双端队列的序列生成能力辨析
 - 队列在层序遍历（BFS）中的应用
 - 链式队列 vs 循环队列优缺点对比
-
-## 关联页面
-
-- [[stack.md|栈（Stack）]] — LIFO 线性表，队列的姊妹结构
-- [[stack-applications.md|栈和队列的应用]] — 队列在 BFS 中的应用

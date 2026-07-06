@@ -168,7 +168,3 @@ int Factorial(int n) {
 - 前缀表达式的求值方法（从右到左扫描）
 - Fibonacci 递归的重复计算问题
 - 递归转非递归的两种方式
-## 关联页面
-
-- [[stack.md|栈（Stack）]] — LIFO 线性表的基本定义与实现
-- [[queue.md|队列（Queue）]] — FIFO 线性表，BFS 依赖队列实现

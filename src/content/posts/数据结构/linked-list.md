@@ -261,7 +261,7 @@ void Free_SL(SLinkList space, int k) {
 
 ## 各结构复杂度对比
 
-| 操作 | [[sequential-list.md\|顺序表]] | 单链表 | 双链表 | 循环单链表（尾指针） | 静态链表 |
+| 操作 | 顺序表 | 单链表 | 双链表 | 循环单链表（尾指针） | 静态链表 |
 |------|---------|--------|--------|---------------------|----------|
 | 按位查找 | **O(1)** | O(n) | O(n) | O(n) | O(n) |
 | 按值查找 | O(n) | O(n) | O(n) | O(n) | O(n) |
@@ -302,9 +302,3 @@ void Free_SL(SLinkList space, int k) {
 - 循环链表遍历的终止条件（`p != L`）
 
 ---
-## 关联页面
-
-- [[algorithm-analysis.md|算法分析]] — 复杂度分析方法，为链表操作提供理论基础
-- [[sequential-list.md|顺序表（Sequential List）]] — 顺序存储实现，与链表对比的经典参照
-- [[stack.md|栈（Stack）]] — 链栈：链表的栈式应用
-- [[queue.md|队列（Queue）]] — 链式队列：链表的队列式应用
