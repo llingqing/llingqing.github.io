@@ -1,5 +1,5 @@
 ---
-title: "{{title}}"
+title: 哈夫曼树
 published: 2026-07-06
 tags: [数据结构, 考研, 树, 哈夫曼]
 category: 数据结构

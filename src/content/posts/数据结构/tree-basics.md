@@ -1,5 +1,5 @@
 ---
-title: "{{title}}"
+title: 树与二叉树基础
 published: 2026-07-06
 tags: [数据结构, 考研, 树, 二叉树]
 category: 数据结构

@@ -176,7 +176,7 @@ for (int i = 0; i < n; i++)
 ---
 ## 关联页面
 
-- [[sequential-list|顺序表]] — 复杂度分析在顺序表中的应用实例
-- [[linked-list|链表]] — 复杂度分析在链表中的应用实例
+- ![顺序表](src/content/posts/数据结构/sequential-list) — 复杂度分析在顺序表中的应用实例
+- ![链表](src/content/posts/数据结构/linked-list) — 复杂度分析在链表中的应用实例
 
 

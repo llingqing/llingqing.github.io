@@ -1,5 +1,5 @@
 ---
-title: "{{title}}"
+title: 二叉树的遍历与线索化
 published: 2026-07-06
 tags: [数据结构, 考研, 树, 二叉树]
 category: 数据结构

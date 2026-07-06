@@ -1,5 +1,5 @@
 ---
-title: "{{title}}"
+title: 特殊矩阵的压缩存储
 published: 2026-07-06
 tags: [数据结构, 考研, 矩阵, 压缩存储]
 category: 数据结构
