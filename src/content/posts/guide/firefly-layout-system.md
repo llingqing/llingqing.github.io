@@ -41,7 +41,7 @@ Firefly 提供了灵活的布局系统，允许您根据内容需求和个人喜
 
 #### 右侧边栏 (position: "right")
 
-![右侧边栏布局](src/content/posts/right-grid2.avif)
+![右侧边栏布局](src/content/posts/images/right-grid2.avif)
 
 #### 特点
 
