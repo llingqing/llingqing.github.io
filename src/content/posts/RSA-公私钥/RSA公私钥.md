@@ -169,8 +169,8 @@ with open("private1.pem", "rb") as f:
 ### OAEP
 > **最优非对称加密填充**（英语：**Optimal Asymmetric Encryption Padding**，缩写：**OAEP**
 >
+![e57957088b7385803809a4499c0c0a2c_MD5.jpeg](https://tu.lingluoa.dpdns.org/file/obsidian/1783318089463_e57957088b7385803809a4499c0c0a2c_MD5.jpeg)
 
-![](./e57957088b7385803809a4499c0c0a2c_MD5.jpeg)  
 OAEP结构，正常读取求解会导致结果乱码。  
 需要针对性的代码
 
