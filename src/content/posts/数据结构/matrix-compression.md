@@ -1,7 +1,7 @@
 ---
 title: "{{title}}"
-published: {{date}}
-updated: {{date}}
+published: "{{date}}"
+updated: "{{date}}"
 tags: [数据结构, 考研, 矩阵, 压缩存储]
 category: 数据结构
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "{{title}}"
-published: {{date}}
-updated: {{date}}
+published: "{{date}}"
+updated: "{{date}}"
 image: api
 tags: [数据结构, 考研, 树, 红黑树]
 category: 数据结构
