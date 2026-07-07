@@ -6,7 +6,7 @@ export const profileConfig: ProfileConfig = {
 	// 1. public 目录（以 "/" 开头，不优化）："/assets/images/avatar.webp"
 	// 2. src 目录（不以 "/" 开头，自动优化但会增加构建时间，推荐）："assets/images/avatar.webp"
 	// 3. 远程 URL："https://example.com/avatar.jpg"
-	avatar: "https://weavatar.com/avatar/e3cdc91b78e964662d8c56eb1673de882ad29a25c3853b7168afd2adc9ae7faa",
+	avatar: "https://tu.lingluoa.dpdns.org/file/1783403593945_Miracle_hikari_138461280_p0.png",
 
 	// 名字
 	name: "lingluoa",
