@@ -114,8 +114,8 @@ void MergeSort(int A[], int low, int high) {
 
 ## 关联页面
 
-- [排序基础概念](./sorting-basics) — 算法总览、稳定性
-- [交换排序](./sorting-exchange) — 快速排序（归并 vs 快排对比）
-- [选择排序](./sorting-selection) — 堆排序（归并 vs 堆排对比）
-- [外部排序](./external-sort) — 外部排序基于归并思想
-- [排序资料摘要](./sorting)
+- [排序基础概念](../sorting-basics) — 算法总览、稳定性
+- [交换排序](../sorting-exchange) — 快速排序（归并 vs 快排对比）
+- [选择排序](../sorting-selection) — 堆排序（归并 vs 堆排对比）
+- [外部排序](../external-sort) — 外部排序基于归并思想
+- [排序资料摘要](../sorting)

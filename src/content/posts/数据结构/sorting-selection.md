@@ -163,6 +163,6 @@ void HeapSort(int A[], int n) {
 
 ## 关联页面
 
-- [排序基础概念](./sorting-basics) — 稳定性、算法总览
-- [交换排序](./sorting-exchange) — 快速排序（与堆排对比）
-- [归并排序](./merge-sort)（与堆排对比：空间、稳定性）
+- [排序基础概念](../sorting-basics) — 稳定性、算法总览
+- [交换排序](../sorting-exchange) — 快速排序（与堆排对比）
+- [归并排序](../merge-sort)（与堆排对比：空间、稳定性）

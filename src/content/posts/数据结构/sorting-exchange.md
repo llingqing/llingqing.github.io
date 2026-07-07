@@ -138,7 +138,7 @@ void QuickSort(int A[], int low, int high) {
 
 ## 关联页面
 
-- [排序基础概念](./sorting-basics) — 稳定性、趟的概念、算法总览
-- [插入排序](./sorting-insertion) — 直接插入、希尔
-- [选择排序](./sorting-selection) — 堆排序（与快排对比）
-- [归并排序](./merge-sort)（与快排对比：稳定性、空间、最坏情况）
+- [排序基础概念](../sorting-basics) — 稳定性、趟的概念、算法总览
+- [插入排序](../sorting-insertion) — 直接插入、希尔
+- [选择排序](../sorting-selection) — 堆排序（与快排对比）
+- [归并排序](../merge-sort)（与快排对比：稳定性、空间、最坏情况）

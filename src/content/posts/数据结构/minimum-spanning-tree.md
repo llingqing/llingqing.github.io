@@ -129,5 +129,5 @@ image: api
 
 ## 关联页面
 
-- [图的基本概念与存储结构](./graph-basics) — 图的存储是 MST 算法的基础
-- [查找](./search) — 并查集（Union-Find）在 Kruskal 算法中的应用
+- [图的基本概念与存储结构](../graph-basics) — 图的存储是 MST 算法的基础
+- [查找](../search) — 并查集（Union-Find）在 Kruskal 算法中的应用

@@ -246,5 +246,5 @@ bool DeQueue(LinkQueue *Q, int *x) {
 - 链式队列 vs 循环队列优缺点对比
 ## 关联页面
 
-- [栈（Stack）](./stack) — LIFO 线性表，队列的姊妹结构
-- [栈和队列的应用](./stack-applications) — 队列在 BFS 中的应用
+- [栈（Stack）](../stack) — LIFO 线性表，队列的姊妹结构
+- [栈和队列的应用](../stack-applications) — 队列在 BFS 中的应用

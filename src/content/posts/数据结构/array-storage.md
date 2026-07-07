@@ -182,5 +182,5 @@ $$\text{offset}(i_1, i_2, \ldots, i_n) = \sum_{k=1}^{n} i_k \cdot \prod_{p=k+1}^
 
 ## 关联页面
 
-- [特殊矩阵的压缩存储](./matrix-compression) — 数组存储的实际应用
-- [线性表 — 资料摘要](./linear-list) — 顺序表（数组实现的线性表）
+- [特殊矩阵的压缩存储](../matrix-compression) — 数组存储的实际应用
+- [线性表 — 资料摘要](../linear-list) — 顺序表（数组实现的线性表）

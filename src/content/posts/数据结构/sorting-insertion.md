@@ -146,7 +146,7 @@ void ShellSort(int A[], int n) {
 
 ## 关联页面
 
-- [排序基础概念](./sorting-basics) — 稳定性、分类、趟的概念
-- [交换排序](./sorting-exchange) — 冒泡、快速排序
-- [选择排序](./sorting-selection) — 简单选择、堆排序
-- [归并排序](./merge-sort)
+- [排序基础概念](../sorting-basics) — 稳定性、分类、趟的概念
+- [交换排序](../sorting-exchange) — 冒泡、快速排序
+- [选择排序](../sorting-selection) — 简单选择、堆排序
+- [归并排序](../merge-sort)

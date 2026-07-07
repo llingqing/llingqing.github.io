@@ -262,7 +262,7 @@ void Free_SL(SLinkList space, int k) {
 
 ## 各结构复杂度对比
 
-| 操作 | [顺序表](./sequential-list) | 单链表 | 双链表 | 循环单链表（尾指针） | 静态链表 |
+| 操作 | [顺序表](../sequential-list) | 单链表 | 双链表 | 循环单链表（尾指针） | 静态链表 |
 |------|---------|--------|--------|---------------------|----------|
 | 按位查找 | **O(1)** | O(n) | O(n) | O(n) | O(n) |
 | 按值查找 | O(n) | O(n) | O(n) | O(n) | O(n) |
@@ -280,8 +280,8 @@ void Free_SL(SLinkList space, int k) {
 
 链表的变体在实际工程中有广泛应用：
 
-- [栈（Stack）](./stack)的链式实现——**链栈**：以链表头部作为栈顶，入栈/出栈均为 O(1)
-- [队列（Queue）](./queue)的链式实现——**链式队列**：头指针 front 指向头结点，尾指针 rear 指向尾结点，入队 O(1)、出队 O(1)
+- [栈（Stack）](../stack)的链式实现——**链栈**：以链表头部作为栈顶，入栈/出栈均为 O(1)
+- [队列（Queue）](../queue)的链式实现——**链式队列**：头指针 front 指向头结点，尾指针 rear 指向尾结点，入队 O(1)、出队 O(1)
 - 操作系统进程调度：循环链表实现时间片轮转（Round-Robin）调度
 - 内存管理：空闲块链表（free list）管理动态内存分配
 - LRU 缓存：结合哈希表的双向链表实现 O(1) 的缓存淘汰
@@ -306,7 +306,7 @@ void Free_SL(SLinkList space, int k) {
 
 ## 关联页面
 
-- [算法分析](./algorithm-analysis) — 复杂度分析方法，为链表操作提供理论基础
-- [顺序表（Sequential List）](./sequential-list) — 顺序存储实现，与链表对比的经典参照
-- [栈（Stack）](./stack) — 链栈：链表的栈式应用
-- [队列（Queue）](./queue) — 链式队列：链表的队列式应用
+- [算法分析](../algorithm-analysis) — 复杂度分析方法，为链表操作提供理论基础
+- [顺序表（Sequential List）](../sequential-list) — 顺序存储实现，与链表对比的经典参照
+- [栈（Stack）](../stack) — 链栈：链表的栈式应用
+- [队列（Queue）](../queue) — 链式队列：链表的队列式应用

@@ -171,5 +171,5 @@ int Factorial(int n) {
 - 递归转非递归的两种方式
 ## 关联页面
 
-- [栈（Stack）](./stack) — LIFO 线性表的基本定义与实现
-- [队列（Queue）](./queue) — FIFO 线性表，BFS 依赖队列实现
+- [栈（Stack）](../stack) — LIFO 线性表的基本定义与实现
+- [队列（Queue）](../queue) — FIFO 线性表，BFS 依赖队列实现

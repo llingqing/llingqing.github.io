@@ -109,5 +109,5 @@ void CountingSort(int A[], int B[], int n, int k) {
 
 ## 关联页面
 
-- [排序基础概念](./sorting-basics) — 稳定性、比较类排序下界
-- [归并排序](./merge-sort) — 同为稳定排序
+- [排序基础概念](../sorting-basics) — 稳定性、比较类排序下界
+- [归并排序](../merge-sort) — 同为稳定排序

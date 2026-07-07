@@ -230,7 +230,7 @@ typedef struct {
 ## 关联页面
 
 - [图的遍历](../graph-traversal) — 基于不同存储结构的 BFS/DFS 实现
-- [最小生成树](./minimum-spanning-tree) — 基于图的贪心算法
-- [最短路径与拓扑排序](./shortest-path-topology) — 图的高级应用
-- [栈（Stack）](./stack) — DFS 的递归本质基于栈
-- [队列（Queue）](./queue) — BFS 的核心数据结构
+- [最小生成树](../minimum-spanning-tree) — 基于图的贪心算法
+- [最短路径与拓扑排序](../shortest-path-topology) — 图的高级应用
+- [栈（Stack）](../stack) — DFS 的递归本质基于栈
+- [队列（Queue）](../queue) — BFS 的核心数据结构

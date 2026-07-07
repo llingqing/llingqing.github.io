@@ -154,8 +154,8 @@ for (int i = 0; i < n; i++)
 
 复杂度分析方法在实际数据结构中的应用：
 
-- [顺序表（Sequential List）](./sequential-list)：按位查找 O(1)、按值查找 O(n)、插入删除 O(n)（平均移动 n/2 个元素）——这些复杂度分析直接决定顺序表的适用场景
-- [链表（Linked List）](./linked-list)：按位查找 O(n)（顺序访问）、已知前驱时插入 O(1)——链表的 O(n) 查找成本是其核心局限
+- [顺序表（Sequential List）](../sequential-list)：按位查找 O(1)、按值查找 O(n)、插入删除 O(n)（平均移动 n/2 个元素）——这些复杂度分析直接决定顺序表的适用场景
+- [链表（Linked List）](../linked-list)：按位查找 O(n)（顺序访问）、已知前驱时插入 O(1)——链表的 O(n) 查找成本是其核心局限
 
 ---
 
@@ -178,5 +178,5 @@ for (int i = 0; i < n; i++)
 
 ## 关联页面
 
-- [顺序表（Sequential List）](./sequential-list)— 复杂度分析在顺序表中的应用实例
-- [链表（Linked List）](./linked-list) — 复杂度分析在链表中的应用实例
+- [顺序表（Sequential List）](../sequential-list)— 复杂度分析在顺序表中的应用实例
+- [链表（Linked List）](../linked-list) — 复杂度分析在链表中的应用实例

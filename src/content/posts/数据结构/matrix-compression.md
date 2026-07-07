@@ -250,4 +250,4 @@ typedef struct OLNode {
 - 邻接矩阵不是稀疏矩阵的压缩结构（2017-03）
 ## 关联页面
 
-- [多维数组的存储](./array-storage) — 数组存储基础知识
+- [多维数组的存储](../array-storage) — 数组存储基础知识
