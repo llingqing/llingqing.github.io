@@ -4,6 +4,7 @@ tags: [数据结构, 考研, 查找]
 published: 2026-07-07
 updated: 2026-07-07
 category: 数据结构
+slug: search-algorithms
 draft: false
 ---
 
@@ -146,9 +147,9 @@ int BinarySearch(int a[], int n, int key) {
 
 树表查找利用树结构组织数据，适合动态查找（频繁插入/删除）。相关的树表查找结构包括：
 
-- [二叉排序树与 AVL 树](./bst-avl.md)：BST 利用左小右大性质，平均 O(log n)；AVL 通过旋转保持严格平衡，保证 O(log n)
-- [红黑树](./red-black-tree.md)：弱平衡策略，插入最多转 2 次、删除最多转 3 次，适合频繁增删
-- [B 树与 B+ 树](./b-tree.md)：多路平衡查找树，专为磁盘 I/O 设计，数据库索引首选
+- [二叉排序树与 AVL 树](./bst-avl)：BST 利用左小右大性质，平均 O(log n)；AVL 通过旋转保持严格平衡，保证 O(log n)
+- [红黑树](./red-black-tree)：弱平衡策略，插入最多转 2 次、删除最多转 3 次，适合频繁增删
+- [B 树与 B+ 树](./b-tree)：多路平衡查找树，专为磁盘 I/O 设计，数据库索引首选
 
 详细内容见各概念页面。
 
@@ -177,7 +178,7 @@ int BinarySearch(int a[], int n, int key) {
 | 仅需精确匹配 | 散列查找 | O(1) 平均时间 |
 | 需要范围查询 | B+ 树 / AVL | 支持有序遍历 |
 
-详细内容请见 [散列表](./hash-table.md) 和 [B 树与 B+ 树](./b-tree.md)。
+详细内容请见 [散列表](./hash-table) 和 [B 树与 B+ 树](./b-tree)。
 
 ## 考研高频考点
 

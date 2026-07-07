@@ -3,6 +3,7 @@ title: 红黑树
 published: 2026-07-06
 tags: [数据结构, 考研, 树, 红黑树]
 category: 数据结构
+slug: red-black-tree
 draft: false
 ---
 :::warning
@@ -166,5 +167,5 @@ h ≤ 2log₂(n + 1)
 ---
 ## 关联页面
 
-- [二叉排序树与平衡二叉树](./bst-avl.md) — 红黑树的基础（BST 性质）与 AVL 对比
-- [树与二叉树基础](./tree-basics.md) — 二叉树定义与存储结构
+- [二叉排序树与平衡二叉树](./bst-avl) — 红黑树的基础（BST 性质）与 AVL 对比
+- [树与二叉树基础](./tree-basics) — 二叉树定义与存储结构

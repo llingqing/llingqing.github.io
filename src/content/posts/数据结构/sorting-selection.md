@@ -4,6 +4,7 @@ tags: [数据结构, 排序, concept, 选择排序]
 published: 2026-07-07
 updated: 2026-07-07
 category: 数据结构
+slug: sorting-selection
 draft: false
 ---
 
@@ -162,6 +163,6 @@ void HeapSort(int A[], int n) {
 
 ## 关联页面
 
-- [排序基础概念](./sorting-basics.md) — 稳定性、算法总览
-- [交换排序](./sorting-exchange.md) — 快速排序（与堆排对比）
-- [归并排序](./merge-sort.md)（与堆排对比：空间、稳定性）
+- [排序基础概念](./sorting-basics) — 稳定性、算法总览
+- [交换排序](./sorting-exchange) — 快速排序（与堆排对比）
+- [归并排序](./merge-sort)（与堆排对比：空间、稳定性）

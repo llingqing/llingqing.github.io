@@ -4,6 +4,7 @@ tags: [数据结构, 考研, 图, MST]
 published: 2026-07-07
 updated: 2026-07-07
 category: 数据结构
+sluug: minimum-spanning-tree
 image: api
 ---
 # 最小生成树（MST）
@@ -128,5 +129,5 @@ image: api
 
 ## 关联页面
 
-- [图的基本概念与存储结构](./graph-basics.md) — 图的存储是 MST 算法的基础
-- [查找](./search.md) — 并查集（Union-Find）在 Kruskal 算法中的应用
+- [图的基本概念与存储结构](./graph-basics) — 图的存储是 MST 算法的基础
+- [查找](./search) — 并查集（Union-Find）在 Kruskal 算法中的应用

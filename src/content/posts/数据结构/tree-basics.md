@@ -3,6 +3,7 @@ title: 树与二叉树基础
 published: 2026-07-06
 tags: [数据结构, 考研, 树, 二叉树]
 category: 数据结构
+slug: tree-basics
 draft: false
 ---
 :::warning
@@ -155,8 +156,8 @@ typedef struct TriTNode {
 ---
 ## 与遍历和工具结构的关系
 
-- 二叉树的遍历算法建立在上述存储结构基础之上，详见 [二叉树的遍历与线索化](./binary-tree-traversal.md)
-- 非递归遍历依赖 [栈（Stack）](./stack.md) 模拟递归过程
-- 层序遍历依赖 [队列（Queue）](./queue.md) 按层次顺序访问结点
-- 二叉排序树和平衡二叉树的概念基于二叉树，详见 [二叉排序树与平衡二叉树](./bst-avl.md)
-- 哈夫曼树是带权二叉树的一种最优形态，详见 [哈夫曼树](./huffman-tree.md)
+- 二叉树的遍历算法建立在上述存储结构基础之上，详见 [二叉树的遍历与线索化](./binary-tree-traversal)
+- 非递归遍历依赖 [栈（Stack）](./stack) 模拟递归过程
+- 层序遍历依赖 [队列（Queue）](./queue) 按层次顺序访问结点
+- 二叉排序树和平衡二叉树的概念基于二叉树，详见 [二叉排序树与平衡二叉树](./bst-avl)
+- 哈夫曼树是带权二叉树的一种最优形态，详见 [哈夫曼树](./huffman-tree)

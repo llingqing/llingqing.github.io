@@ -2,6 +2,7 @@
 title: 顺序表
 tags: [数据结构, 考研, 线性表, 顺序存储]
 published: 2026-07-05
+slug: sequential-list
 category: 数据结构
 ---
 :::warning
@@ -126,7 +127,7 @@ int LocateElem(SqList L, ElemType e) {
 
 ## 顺序表 vs 链表
 
-| 比较维度 | 顺序表 | [链表](./linked-list.md) |
+| 比较维度 | 顺序表 | [链表](./linked-list) |
 |----------|--------|-------|
 | **存取方式** | **随机访问** O(1) | 顺序访问 O(n) |
 | **插入/删除** | 需要移动元素 O(n) | 修改指针 O(1)（已知位置时） |
@@ -164,5 +165,5 @@ int LocateElem(SqList L, ElemType e) {
 
 ## 关联页面
 
-- [算法分析](./algorithm-analysis.md) — 复杂度分析方法，顺序表的复杂度推导基础
-- [链表（Linked List）](./linked-list.md) — 链式存储实现，与顺序表进行对比
+- [算法分析](./algorithm-analysis) — 复杂度分析方法，顺序表的复杂度推导基础
+- [链表（Linked List）](./linked-list) — 链式存储实现，与顺序表进行对比

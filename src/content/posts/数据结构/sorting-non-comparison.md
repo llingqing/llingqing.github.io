@@ -4,6 +4,7 @@ tags: [数据结构, 排序, concept, 非比较排序]
 published: 2026-07-07
 updated: 2026-07-07
 category: 数据结构
+sluug: sorting-non-comparison
 draft: false
 ---
 
@@ -108,5 +109,5 @@ void CountingSort(int A[], int B[], int n, int k) {
 
 ## 关联页面
 
-- [排序基础概念](./sorting-basics.md) — 稳定性、比较类排序下界
-- [归并排序](./merge-sort.md) — 同为稳定排序
+- [排序基础概念](./sorting-basics) — 稳定性、比较类排序下界
+- [归并排序](./merge-sort) — 同为稳定排序

@@ -3,6 +3,7 @@ title: 栈和队列的典型应用
 tags: [数据结构, 考研, 栈, 队列, 括号匹配, 表达式求值, 递归]
 published: 2026-07-05
 category: 数据结构
+slug: stack-applications
 draft: false
 ---
 :::warning
@@ -170,5 +171,5 @@ int Factorial(int n) {
 - 递归转非递归的两种方式
 ## 关联页面
 
-- [栈（Stack）](./stack.md) — LIFO 线性表的基本定义与实现
-- [队列（Queue）](./queue.md) — FIFO 线性表，BFS 依赖队列实现
+- [栈（Stack）](./stack) — LIFO 线性表的基本定义与实现
+- [队列（Queue）](./queue) — FIFO 线性表，BFS 依赖队列实现

@@ -5,6 +5,7 @@ updated: 2026-07-07
 image: api
 tags: [数据结构, 考研, 图]
 category: 数据结构
+slug: graph-traversal
 draft: false
 ---
 :::warning
@@ -132,6 +133,6 @@ DFS 可以用三种状态标记顶点来检测有向图是否有环：
 
 ## 关联页面
 
-- [图的基本概念与存储结构](./graph-basics.md) — 存储结构决定遍历的时间复杂度
-- [栈（Stack）](./stack.md) — DFS 的递归本质基于栈结构
-- [队列（Queue）](./queue.md) — BFS 的核心数据结构
+- [图的基本概念与存储结构](./graph-basics) — 存储结构决定遍历的时间复杂度
+- [栈（Stack）](./stack) — DFS 的递归本质基于栈结构
+- [队列（Queue）](./queue) — BFS 的核心数据结构

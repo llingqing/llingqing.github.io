@@ -4,6 +4,7 @@ tags: [数据结构, 考研, 图]
 published: 2026-07-07
 updated: 2026-07-07
 category: 数据结构
+slug: shortest-path-topology
 draft: false
 ---
 
@@ -13,7 +14,7 @@ draft: false
 
 ### BFS（无权图）
 
-BFS 求无权图单源最短路径利用其逐层扩展的特性：**首次到达即最短**。详见 [图的遍历](./graph-traversal.md)。
+BFS 求无权图单源最短路径利用其逐层扩展的特性：**首次到达即最短**。详见 [图的遍历](./graph-traversal)。
 
 | 指标 | 值 |
 |------|-----|
@@ -218,5 +219,5 @@ for (int k = 0; k < V; k++)        // k 必须在最外层
 
 ## 关联页面
 
-- [图的基本概念与存储结构](./graph-basics.md) — 图的存储是路径算法的基础
-- [图的遍历](./graph-traversal.md) — BFS 求无权图最短路径
+- [图的基本概念与存储结构](./graph-basics) — 图的存储是路径算法的基础
+- [图的遍历](./graph-traversal) — BFS 求无权图最短路径

@@ -3,6 +3,7 @@ title: 二叉树的遍历与线索化
 published: 2026-07-06
 tags: [数据结构, 考研, 树, 二叉树]
 category: 数据结构
+slug: binary-tree-traversal
 draft: false
 ---
 :::warning
@@ -13,7 +14,7 @@ draft: false
 
 ## 遍历概述
 
-**遍历**（Traversal）是指按照某种规则访问树中所有结点一次且仅一次的过程。二叉树的基础定义和存储结构已在 [树与二叉树基础](./tree-basics.md) 中介绍。
+**遍历**（Traversal）是指按照某种规则访问树中所有结点一次且仅一次的过程。二叉树的基础定义和存储结构已在 [树与二叉树基础](./tree-basics) 中介绍。
 
 ---
 
@@ -91,7 +92,7 @@ while 队列非空:
     if p.rchild != NULL: 入队 p.rchild
 ```
 
-> 层序遍历需要借助队列实现，详见 [队列（Queue）](./queue.md)。
+> 层序遍历需要借助队列实现，详见 [队列（Queue）](./queue)。
 
 ### 遍历的递归实现（代码简洁）
 
@@ -226,7 +227,7 @@ void InOrder(ThreadTree T) {
 
 ## 关联页面
 
-- [树与二叉树基础](./tree-basics.md) — 二叉树的定义与存储结构
-- [栈（Stack）](./stack.md) — 非递归遍历的辅助结构
-- [队列（Queue）](./queue.md) — 层序遍历的辅助结构
-- [二叉排序树与平衡二叉树](./bst-avl.md) — 中序遍历的 BST 递增性质
+- [树与二叉树基础](./tree-basics) — 二叉树的定义与存储结构
+- [栈（Stack）](./stac) — 非递归遍历的辅助结构
+- [队列（Queue）](./queue) — 层序遍历的辅助结构
+- [二叉排序树与平衡二叉树](./bst-avl) — 中序遍历的 BST 递增性质

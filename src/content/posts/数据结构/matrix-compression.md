@@ -3,6 +3,7 @@ title: 特殊矩阵的压缩存储
 published: 2026-07-06
 tags: [数据结构, 考研, 矩阵, 压缩存储]
 category: 数据结构
+slug: matrix-compression
 draft: false
 ---
 :::warning
@@ -249,4 +250,4 @@ typedef struct OLNode {
 - 邻接矩阵不是稀疏矩阵的压缩结构（2017-03）
 ## 关联页面
 
-- [多维数组的存储](../array-storage.md) — 数组存储基础知识
+- [多维数组的存储](./array-storage) — 数组存储基础知识

@@ -3,6 +3,7 @@ title: 哈夫曼树
 published: 2026-07-06
 tags: [数据结构, 考研, 树, 哈夫曼]
 category: 数据结构
+slug: huffman-tree
 draft: false
 ---
 :::warning
@@ -194,4 +195,4 @@ typedef struct {
 ---
 ## 关联页面
 
-- [树与二叉树基础](./tree-basics.md) — 二叉树定义、路径与路径长度、叶子与度的概念
+- [树与二叉树基础](./tree-basics) — 二叉树定义、路径与路径长度、叶子与度的概念

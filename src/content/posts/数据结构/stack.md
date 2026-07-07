@@ -2,6 +2,7 @@
 title: 栈（Stack）
 tags: [数据结构, 考研, 栈]
 published: 2026-07-05
+slug: stack
 category: 数据结构
 ---
 :::warning
@@ -225,5 +226,5 @@ bool Pop(LinkStack &top, int &x) {
 - 栈的三种实现（顺序栈、共享栈、链栈）的适用场景选择
 ## 关联页面
 
-- [队列（Queue）](./queue.md) — 栈的姊妹结构，FIFO 线性表
-- [栈和队列的应用](./stack-applications.md) — 括号匹配、表达式求值、递归
+- [队列（Queue）](./queue) — 栈的姊妹结构，FIFO 线性表
+- [栈和队列的应用](./stack-applications) — 括号匹配、表达式求值、递归

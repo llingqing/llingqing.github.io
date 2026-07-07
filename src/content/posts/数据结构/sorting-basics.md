@@ -4,6 +4,7 @@ tags: [数据结构, 排序, concept]
 published: 2026-07-07
 updated: 2026-07-07
 category: 数据结构
+slug: sorting-basics
 draft: false
 ---
 
@@ -113,9 +114,9 @@ draft: false
 
 ## 关联页面
 
-- [插入排序](./sorting-insertion.md) — 直接插入、折半插入、希尔
-- [交换排序](./sorting-exchange.md) — 冒泡、快速
-- [选择排序](./sorting-selection.md) — 简单选择、堆
-- [归并排序](./merge-sort.md) — 二路归并
-- [非比较排序](./sorting-non-comparison.md) — 基数、计数
-- [外部排序](./external-sort.md)
+- [插入排序](./sorting-insertion) — 直接插入、折半插入、希尔
+- [交换排序](./sorting-exchange) — 冒泡、快速
+- [选择排序](./sorting-selection) — 简单选择、堆
+- [归并排序](./merge-sort) — 二路归并
+- [非比较排序](./sorting-non-comparison) — 基数、计数
+- [外部排序](./external-sort)

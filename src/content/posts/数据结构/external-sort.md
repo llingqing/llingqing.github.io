@@ -4,6 +4,7 @@ published: 2026-07-07
 updated: 2026-07-07
 tags: [数据结构, 排序, concept, 外部排序]
 category: 数据结构
+slug: external-sort
 draft: false
 ---
 :::warning
@@ -126,9 +127,9 @@ u = (m - 1) % (k - 1)
 
 ## 关联页面
 
-- [归并排序](./merge-sort.md) — 外部排序基于归并思想
-- [排序基础概念](./sorting-basics.md) — 内部排序 vs 外部排序
-- [排序资料摘要](./sorting.md)
+- [归并排序](./merge-sort) — 外部排序基于归并思想
+- [排序基础概念](./sorting-basics) — 内部排序 vs 外部排序
+- [排序资料摘要](./sorting)
 # 外部排序
 
 当数据量大到内存放不下时，所有内部排序算法都失效了。外部排序的策略：先把数据分成小块在内存中排序后写回磁盘（生成初始归并段），再用多路归并合并成最终有序文件。核心瓶颈在于**磁盘 I/O**。
@@ -246,6 +247,6 @@ u = (m - 1) % (k - 1)
 
 ## 关联页面
 
-- [归并排序](./merge-sort.md) — 外部排序基于归并思想
-- [排序基础概念](./sorting-basics.md) — 内部排序 vs 外部排序
-- [排序资料摘要](./sorting.md)
+- [归并排序](./merge-sort) — 外部排序基于归并思想
+- [排序基础概念](./sorting-basics) — 内部排序 vs 外部排序
+- [排序资料摘要](./sorting)
